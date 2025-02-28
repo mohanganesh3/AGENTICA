@@ -1,0 +1,23 @@
+document_ingestion:
+  description: "Process incoming documents through OCR and format normalization"
+  expected_output: "Normalized text content with metadata"
+  agent: "document_processor"
+  tools: ["ocr_tool", "format_conversion_tool"]
+
+content_classification:
+  description: "Analyze document content and assign appropriate medical tags and categories"
+  expected_output: "Document with healthcare-specific tags and classifications"
+  agent: "medical_tagger"
+  tools: ["nlp_classification_tool"]
+
+index_creation:
+  description: "Create searchable indices for document content using vector embeddings"
+  expected_output: "Searchable document index with semantic capabilities"
+  agent: "search_specialist"
+  tools: ["vector_embedding_tool"]
+
+compliance_check:
+  description: "Verify all document processing meets healthcare regulatory requirements"
+  expected_output: "Compliance verification report with any required actions"
+  agent: "compliance_auditor"
+  tools: ["hipaa_verification_tool"]
