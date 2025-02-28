@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 from dotenv import load_dotenv
-from healthcare_doc_processor.crew import HealthcareDocProcessorCrew
+from my_crew.crew import HealthcareDocProcessorCrew
 
 # Load environment variables
 load_dotenv()
@@ -9,7 +9,7 @@ load_dotenv()
 def run():
     # Replace with your inputs for document processing
     inputs = {
-        'document_path': 'documents/sample_medical_record.pdf',
+        'document_path': '/Users/mohanganesh/Desktop/Medical_Report.pdf',
         'document_type': 'pdf',
         'output_format': 'json',
         'compliance_level': 'strict'

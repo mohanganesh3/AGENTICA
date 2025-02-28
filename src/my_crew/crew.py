@@ -1,14 +1,14 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-from langchain.chat_models import ChatGoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 
 # Import tools
-from healthcare_doc_processor.tools.ocr_tool import OCRTool
-from healthcare_doc_processor.tools.format_conversion_tool import FormatConversionTool
-from healthcare_doc_processor.tools.nlp_classification_tool import NLPClassificationTool
-from healthcare_doc_processor.tools.vector_embedding_tool import VectorEmbeddingTool
-from healthcare_doc_processor.tools.hipaa_verification_tool import HIPAAVerificationTool
+from my_crew.tools.ocr_tool import OCRTool
+from my_crew.tools.format_conversion_tool import FormatConversionTool
+from my_crew.tools.nlp_classification_tool import NLPClassificationTool
+from my_crew.tools.vector_embedding_tool import VectorEmbeddingTool
+from my_crew.tools.hipaa_verification_tool import HIPAAVerificationTool
 
 @CrewBase
 class HealthcareDocProcessorCrew():
